@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>医疗设备数据采集系统</title>
+
+	<!-- Loading Angular -->
+	<script src="/bower_components/angular/angular.min.js"></script>
+	<script src="/bower_components/angular-md5/angular-md5.min.js"></script>
+	<script src="/bower_components/angular-cookies/angular-cookies.min.js"></script>
+
+	<script src="/bower_components/angular-notify/dist/angular-notify.min.js"></script>
+
+	<link href="/bower_components/angular-notify/dist/angular-notify.min.css" rel="stylesheet">
+
+	<link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Loading Flat UI -->
+	<link href="/bower_components/flat-ui/dist/css/flat-ui.css" rel="stylesheet">
+
+	<link href="/css/join.css" rel="stylesheet">
+
+</head>
+<body ng-app="Join" ng-controller="joinCtrl">
+
+	<div class="join-login">
+		<div class="join-container">
+
+
+			<div class="login-form">
+
+				<h3 class="tile-title join-title">加入到医疗设备数据采集系统</h3>
+				<form name="myForm" novalidate>
+					<div class="form-group">
+						<input type="text" class="form-control login-field" value="" placeholder="用户名" id="name" name="name" ng-model="name" ng-blur="nameValidate()" required/>
+						<label class="login-field-icon fui-user" for="join-name"></label>
+						<label ng-show="nameNull" class="validate-invalid" for="name">用户名不能为空</label>
+					</div>
+
+					<div class="form-group">
+						<input type="email" class="form-control login-field" value="" placeholder="邮箱" id="mail" name="mail" ng-model="mail" ng-blur="mailValidate()" required/>
+						<label class="login-field-icon fui-mail" for="mail"></label>
+						<label ng-show="emailNull" class="validate-invalid" for="mail">邮箱不能为空</label>
+						<label ng-show="emailInvalid" class="validate-invalid" for="mail">请输入正确格式的邮箱</label>
+					</div>
+
+					<div class="form-group">
+						<input type="password" class="form-control login-field" value="" placeholder="密码" id="password" name="password" ng-model="password" ng-blur="passwordValidate()" required/>
+						<label class="login-field-icon fui-lock" for="join-pass"></label>
+						<label ng-show="passwordNull" class="validate-invalid" for="password">密码不能为空</label>
+					</div>
+				</form>
+
+				<a class="btn btn-primary btn-lg btn-block" ng-click="join()">注册</a>
+				<a class="login-link" href="/login">已经有账号了 登陆</a>
+			</div>
+		</div>
+	</div>
+	
+
+	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="/bower_components/videojs/dist/video-js/video.js"></script>
+	<script src="/bower_components/flat-ui/dist/js/flat-ui.min.js"></script>
+
+	<script src="/js/joinApp.js"></script>
+	<script src="/js/joinCtrl.js"></script>
+</body>
+</html>

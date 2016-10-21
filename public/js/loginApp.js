@@ -1,0 +1,1 @@
+var appLogin = angular.module("Login",["angular-md5","ngCookies","cgNotify"]);

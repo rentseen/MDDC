@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>医疗设备数据采集系统</title>
+	<script src="/bower_components/angular/angular.min.js"></script>
+	<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="/bower_components/angular-cookies/angular-cookies.min.js"></script>
+	<script src="/bower_components/echarts/dist/echarts.min.js"></script>
+	<link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Loading Flat UI -->
+	<link href="/bower_components/flat-ui/dist/css/flat-ui.css" rel="stylesheet">
+	<link href="/css/user.css" rel="stylesheet">
+</head>
+
+<body ng-app="User" ng-controller="userCtrl">
+	<div class="row">
+		<div class="col-xs-12">
+			<nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+						<span class="sr-only">Toggle navigation</span>
+					</button>
+					<a class="navbar-brand" href="#">用户主页</a>
+				</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse-01">
+					<ul class="nav navbar-nav navbar-left">
+						<li><a href="#fakelink">用户数据</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">录入数据<b class="caret"></b></a>
+							<span class="dropdown-arrow"></span>
+							<ul class="dropdown-menu">
+								<li><a href="#">血压计</a></li>
+								<li><a href="#">肝功</a></li>
+								<li><a href="#">血常规</a></li>
+								<li><a href="#">身高</a></li>
+								<li><a href="#">体重</a></li>
+								<li><a href="#"></a></li>
+								<li class="divider"></li>
+								<li><a href="#">更多</a></li>
+							</ul>
+						</li>
+						<li><a href="#fakelink">关于我们</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{username}}<b class="caret"></b></a>
+							<span class="dropdown-arrow"></span>
+							<ul class="dropdown-menu">
+								<li><a href="#">账号信息</a></li>
+								<li><a href="#">添加设备</a></li>
+								<li><a href="#">修改密码</a></li>
+								<li><a href="#">关联账号</a></li>
+								<li><a href="#">绑定手机</a></li>
+							</ul>
+						</li>
+						<li class="divider">|</li>
+						<li><a class="title-join" href="#" ng-click="logOff()">退出</a></li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</nav><!-- /navbar -->
+		</div>
+	</div> <!-- /row -->
+	<div ui-view></div>
+	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="/bower_components/videojs/dist/video-js/video.js"></script>
+	<script src="/bower_components/flat-ui/dist/js/flat-ui.min.js"></script>
+	<script src="/js/userApp.js"></script>
+	<script src="/js/userCtrl.js"></script>
+</body>
+</html>

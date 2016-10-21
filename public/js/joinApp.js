@@ -1,0 +1,1 @@
+var appJoin = angular.module("Join",["angular-md5","ngCookies","cgNotify"]);

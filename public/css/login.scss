@@ -1,0 +1,33 @@
+body{
+	background-color: #1abc9c;
+}
+.join-login{
+	height:100%;
+	width:100%;
+	
+
+	.join-container{
+		margin-left: auto;
+		margin-right: auto;
+		width:359px;
+		height:244px;
+		margin-top: 150px;
+
+		.login-form{
+			.join-title{
+				margin-top: 20px;
+				margin-bottom: 30px;
+				text-align: center;
+			}
+			.validate-invalid{
+				color: #FF2851;
+			    position: absolute;
+			    right: 15px;
+    			top: 3px;
+    			font-size: 16px;
+			    padding: 0 19px;
+			}
+		}
+
+	}
+}
